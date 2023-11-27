@@ -1,5 +1,6 @@
 import { Component, Input,  } from '@angular/core';
-import { Category } from '../pages/tabs/models/category.models';
+import { Category } from 'src/app/models/category.model';
+
 
 @Component({
   selector: 'app-category-item',
@@ -7,6 +8,6 @@ import { Category } from '../pages/tabs/models/category.models';
   styleUrls: ['./category-item.component.scss'],
 })
 export class CategoryItemComponent  {
-  @Input () item: Category | undefined;
+  @Input () item!: Category;
 
 }

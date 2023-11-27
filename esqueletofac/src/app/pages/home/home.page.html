@@ -1,0 +1,37 @@
+<ion-content class="ion-padding">
+  <div id="header" class="ion-margin-bottom">
+    <ion-icon id="menu-icon" name="grid-outline"></ion-icon>
+    <div id="location">
+      <ion-icon name="location"></ion-icon>
+      <h4 class="ion-np-margin">Subawanga</h4>
+    </div>
+    <div id="avatar">
+      <ion-img src="../../../assets/avatar.png"></ion-img>
+    </div>
+  </div>
+
+  <ion-searchbar></ion-searchbar>
+
+  <div id="banner">
+    <ion-img src="../../../assets/banner.jpg"></ion-img>
+  </div>
+
+  <div class="list-title">
+    <h3 class="title">Top Categories</h3>
+  </div>
+
+  <swiper-container>
+    <swiper-slide *ngFor="let item of categories">
+      <app-category-item [item]="item"></app-category-item>
+    </swiper-slide>
+  </swiper-container>
+
+  <div class="list-title">
+    <h3 class="title">Exclusive Offer</h3>
+    <a href="">See All</a>
+  </div>
+
+  <div class="product-list">
+    <app-product-card *ngFor="let item of products"></app-product-card>
+  </div>
+</ion-content>
